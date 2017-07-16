@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One" rel="stylesheet">
+
+		<title>Contacto del currículum online de Jordi Barrero</title>
+	</head>
+
+	<body>
+		<header id="nav-header">
+
+			<nav id="main-nav">
+				<ul class="navbar-list">
+					<li class="navbar-list-item">
+						<a href="index.html">Inicio</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Quién soy</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Estudios</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Sobre mi</a>
+					</li>
+					<li class="navbar-list-item active">
+						<a href="contacto.html">Contacto</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="tareas.html">Tareas</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="contacto-image"></div> <!--Main image added in css -->
+		</header>
+
+
+		<main class="main-container">
+
+			<section class="contacto section-container section-reverse dark">
+
+			<h2>Contacto</h2>
+				
+					<form name="contacto-form" method="get" novalidate>
+					<div class="form">
+						<div class="form-item">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                        </div>
+
+                        <div class="form-item">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="nombre@gmail.com"
+                                    pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                        </div>
+
+                        <div class="form-item">
+                            <div>¿Cómo me has conocido</div>
+                                <div>
+	                                <label for="conocido_1">A través de un amigo</label>
+	                                <input type="radio" id="conocido_1" name="conocido" value="amigo">
+	                            </div>
+
+                                <div>
+	                                <label for="conocido_2">Búsqueda en Internet</label>
+	                                <input type="radio" id="conocido_2" name="conocido" value="internet">
+                                </div>
+
+                                <div>
+	                                <label for="conocido_3">Otros</label>
+	                                <input type="radio" id="conocido_3" name="conocido" value="otros">
+                                </div>
+
+                                <div class="hidden-input">      
+                                	<input type="text" id="hiddenInput" name="otros-text" value="otros" maxlenght="25">
+                                </div>
+                                
+                        </div>
+                        <div class="form-item">   
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,12}">
+                        </div>
+
+                        <div class="form-item">
+                            <textarea name="textarea" id="textarea" rows="10" cols="50">Escribe cualquier sugerencia o duda</textarea>
+                            	
+                        </div>
+
+
+                        <div class="form-item">
+                            <button type="submit" id="enviar">Enviar</button>
+                        </div>
+
+
+					</div>
+					
+					</form>						
+			</section>
+			
+		</main>
+	</body>
+	<script type="text/javascript" src="./js/form.js"></script>
+</html>

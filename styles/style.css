@@ -1,0 +1,314 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* El tamaño de las cajas se calcula desde el borde , no desde el interior */
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+
+main {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+p {
+	padding-bottom: 0.5em;
+}
+
+h2 {
+	text-align: right;
+	padding-right: 3em;
+	padding-bottom: 1em;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #657A83;
+	padding-bottom: 1em;
+}
+
+.section-container {
+	padding: 50px 10em;
+}
+
+.section-reverse {
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+}
+
+.padding-bottom-br {
+	padding-bottom: 1em;
+}
+
+.dark {
+	background-color: #222222;
+	color: #eee;
+}
+
+.blue {
+	background-color: #324851;
+	color: #eee;
+}
+
+
+
+/*------------------------------------------HEADER-------*/
+
+h1 {
+	color: #fff;
+	font-family: Megrim;
+	font-size: 4em;
+	position: absolute;
+	top:60%;
+	left: 25%;
+
+	animation: mainTitleAnimation 1s forwards;
+	animation-delay: 0.5s;
+	visibility: hidden;
+}
+
+.title-cite {
+	color: #fff;
+	font-family: Poiret One;
+	font-size: 2em;
+	position: absolute;
+	top:68%;
+	left: 25%;
+
+	animation: citeTitleAnimation 1.5s forwards;
+	animation-delay: 1.5s;
+	visibility: hidden;
+}
+
+#main-image {
+	background-image: url(../images/imagenCabecera.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%; /*alto y ancho*/
+	background-position: center center; /* centrada en el eje de la x y dels y*/
+	height: 100vh; /*Para que ocupe todo el alto */
+}
+
+#contacto-image {
+	background-image: url(../images/imagenCabeceraContacto.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%; /*alto y ancho*/
+	background-position: center center; /* centrada en el eje de la x y dels y*/
+	padding-top: 400px;
+}
+
+@keyframes mainTitleAnimation{
+	0% {
+		transform: scale(0.3, 0.3);
+		visibility: visible;
+	}
+	30% {
+		transform: scale(1.2, 1.2);
+	}
+	60% {
+		transform: scale(0.9, 0.9);
+	}
+	100% {
+		transform: scale(1, 1);
+		visibility: visible;
+	}
+}
+
+@keyframes citeTitleAnimation {
+	0% {
+		transform: translateY(200px);
+		visibility: visible;
+	}
+	30% {
+		transform: translateY(0px);
+	}
+
+	100% {
+		transform: translateY(20px);
+		visibility: visible;
+	}
+}
+
+
+
+
+/*--------------------------------------------NAV-------*/
+#main-nav {
+	background-color: #333;
+	border-bottom: 0.5px solid rgba(238, 238, 238, 0.5);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+#main-nav > .navbar-list {
+	list-style-type: none;
+	float: right;
+	font-size: 0;
+}
+
+#main-nav > .navbar-list > .navbar-list-item {
+	display: inline-block;
+	font-size: 16px;
+}
+
+#main-nav > .navbar-list > .navbar-list-item a{
+	color: #eee;
+	display: inline-block;
+	padding:1em 1.5em;
+	text-decoration: none;
+
+	transition: background-color 0.5s linear;
+}
+
+#main-nav > .navbar-list > .navbar-list-item a:hover{
+	background-color: #555;
+}
+
+#main-nav > .navbar-list > .navbar-list-item.active a {
+
+	background-color: #555;
+}
+
+
+
+
+/*----------------------------------------QUIEN SOY-------*/
+.quien-soy {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.quien-soy > .quienSoy-img {
+	flex: 1; /* Espacio que ocupa este elemto */
+}
+
+.quien-soy > .quienSoy-description {
+	flex: 1; /* Espacio que ocupa este elemto */
+}
+
+.quien-soy > .quienSoy-img img {
+	border-radius: 50%;
+	border: 3px solid #324851;
+	max-height: 200px;
+	max-width: 100%;
+	transition: transform 1s, border 1s cubic-bezier(0.81, 0.24, 0, 1.54);
+	-webkit-transition: transform 1s, border 1s cubic-bezier(0.81, 0.24, 0, 1.54);
+}
+
+.quien-soy > .quienSoy-img img:hover {
+	border: 3px solid #00806d ;
+	transform: scale(1.2, 1.2);
+	-webkit-transform: scale(1.2, 1.2);
+}
+
+
+
+/*----------------------------------------ESTUDIOS-------*/
+.estudios-flex {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.estudios-flex > div {
+	text-align: center;
+}
+
+.estudios-flex > div > i {
+	font-size: 3em;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+
+.estudios-item1, .estudios-item2, .estudios-item3{
+	align-self: stretch;
+	max-width: 300px;
+}
+
+
+
+/*----------------------------------------SOBRE MI-------*/
+.sobre-mi {
+	overflow: auto;
+}
+
+.floated-left {
+	float: left;
+	padding: 1em 1em;
+}
+
+blockquote {
+	clear: both;
+	color: #657A83;
+	text-align: center;
+	padding: 2em;
+	font-style: italic;
+}
+
+.sample-video {
+	text-align: center;
+	padding-top: 2em;
+}
+
+
+
+
+/*----------------------------------------CONTACTO-------*/
+.form {
+	overflow: auto;
+	padding: 1em 15em;
+}
+
+.form-item {
+	padding: 1em;
+}
+
+.hidden-input{
+	padding-top: 1em;
+	visibility: hidden;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+button[disabled] {
+    opacity: 0.5;
+}
+
+
+
+/*----------------------------------------TAREAS-------*/
+.tareaFlexbox {
+	display: flex;
+	justify-content: space-around;
+}
+
+.deleteTask {
+	float:none !important;
+}
+
+
+
+
+

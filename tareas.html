@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./styles/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One" rel="stylesheet">
+
+		<!--jQuery -->
+		<script src="./js/jquery-3.2.1.js"></script>
+
+		<title>Tareas del currículum online de Jordi Barrero</title>
+	</head>
+
+	<body>
+		<header id="nav-header">
+
+			<nav id="main-nav">
+				<ul class="navbar-list">
+					<li class="navbar-list-item">
+						<a href="index.html">Inicio</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Quién soy</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Estudios</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="">Sobre mi</a>
+					</li>
+					<li class="navbar-list-item">
+						<a href="contacto.html">Contacto</a>
+					</li>
+					<li class="navbar-list-item active">
+						<a href="tareas.html">Tareas</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div id="contacto-image"></div> <!--Main image added in css -->
+		</header>
+
+
+		<main class="main-container section-tareas">
+			<section class="section-container section-tareas section-reverse dark">
+
+				<h2>Tareas</h2>
+				
+				<div class="tareaFlexbox">
+					
+					<div class="tareaItem">
+
+						<h3>Añadir nueva tarea</h3>
+						<form>
+							<input type="text" id="newTaskName" name="name" placeholder="Nueva tarea..." required>
+							<br>
+							<br>
+							<button id="sendNewTask">Enviar</button>
+						</form>
+					</div>
+
+
+					<div class="tareaItem">
+						<h3>Tareas pendientes</h3>
+						<div class="loader"></div>
+						<div>
+							<ul id="taskContainer">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			
+			
+		</main>
+	</body>
+	<script type="text/javascript" src="./js/ajax.js"></script>
+</html>
