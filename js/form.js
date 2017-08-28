@@ -31,10 +31,10 @@ inputConocido['conocido_3'].addEventListener('click', showHiddenInput);
 
 
 // Limitar el textarea a 150 palabras
-var wordsLimit = 150;
-var wordCount = {};
-
 function checkWordLimit() {
+	var wordsLimit = 150; //cambiar a 150
+	var wordCount = {};
+	
 	textareaContent = document.getElementById('textarea').value;
 	wordCount = textareaContent.split(" ").length;
 
@@ -79,7 +79,18 @@ form.addEventListener('submit', function(event) {
 	}
 
 
-	checkWordLimit();
+	if(inputTextarea.checkValidity() === false) {
+		alert("Escribe un texto");
+		inputTextarea.focus();
+		event.preventDefault();
+		return false;
+	}
+
+	if(checkWordLimit() === false) {
+		inputTextarea.focus();
+		event.preventDefault();
+		return false;
+	}
 
 
 
