@@ -36,7 +36,8 @@ function checkWordLimit() {
 	var wordCount = {};
 	
 	textareaContent = document.getElementById('textarea').value;
-	wordCount = textareaContent.split(" ").length;
+	replaceSpaces = textareaContent.replace(/\s\s+/g, ' ').trim();
+	wordCount = replaceSpaces.split(" ").length;
 
 	if(wordCount > wordsLimit){
 		alert("Has sobrepasado el número de palabras, el límite es de " + wordsLimit + " palabras y has introducido " + wordCount);
